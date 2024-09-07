@@ -18,7 +18,6 @@ function testLanguage($language) {
         $output = @(.\test.exe)
         Remove-Item test.exe
         Remove-Item test.obj
-        
     }
 
     elseif ($language -eq "C++") {
@@ -30,6 +29,13 @@ function testLanguage($language) {
 
     elseif ($language -eq "Java") {
         $output = @(java src\test.java)
+    }
+    
+    elseif ($language -eq "Rust") {
+        rustc .\src\test.rs
+        $output = @(.\test.exe)
+        Remove-item test.exe
+        Remove-Item test.pdb
     }
 
     else {
@@ -50,5 +56,4 @@ testLanguage("Ruby")
 testLanguage("C")
 testLanguage("C++")
 testLanguage("Java")
-
-# TODO: Kotlin, TypeScript and JavaScript
+testLanguage("Rust")

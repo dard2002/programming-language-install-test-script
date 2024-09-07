@@ -11,11 +11,11 @@ A PowerShell script that tests for installation of programming languages for new
 - Java
 - Ruby
 - Python
+- Rust
 
 ### Coming Soon
 - C#
 - TypeScript
 - JavaScript
 - Kotlin
-- Rust
 - Go
